@@ -1,4 +1,4 @@
-Math in SQL.
+-- Math in SQL.
 
 SELECT 2 + 2;    -- addition
 
