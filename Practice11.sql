@@ -5,7 +5,6 @@
 SELECT upper('Neal7');
 SELECT lower('Randy');
 SELECT initcap('at the end of the day');
--- Note initcap's imperfect for acronyms
 SELECT initcap('Practical SQL');
 
 -- Character Information.
@@ -31,7 +30,7 @@ SELECT replace('bat', 'b', 'c');
 
 -- Any character one or more times.
 
-SELECT substring('The game starts at 7 p.m. on May 2, 2024.' from '.+'); -- Any character followed by the rest
+SELECT substring('The game starts at 7 p.m. on May 2, 2024.' from '.+');
 
 -- One or two digits followed by a space and a.m. or p.m. in a noncapture group.
 
@@ -86,8 +85,8 @@ SELECT array_length(regexp_split_to_array('Phil Mike Tony Steve', ' '), 1);
 CREATE TABLE crime_reports (
     crime_id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     case_number text,
-    date_1 timestamptz,  -- note: this is the PostgreSQL shortcut for timestamp with time zone
-    date_2 timestamptz,  -- note: this is the PostgreSQL shortcut for timestamp with time zone
+    date_1 timestamptz,
+    date_2 timestamptz,
     street text,
     city text,
     crime_type text,
