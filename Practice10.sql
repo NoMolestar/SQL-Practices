@@ -16,7 +16,8 @@ COPY ice_cream_survey
 FROM '/tmp/ice_cream_survey.csv'
 WITH (FORMAT CSV, HEADER);
 
--- View the data
+-- View the data.
+
 SELECT * 
 FROM ice_cream_survey
 ORDER BY response_id
@@ -64,7 +65,7 @@ AS (flavor text,
     "Midtown" bigint,
     "Uptown" bigint);
     
--- Listing 13-18: Creating and filling a temperature_readings table
+-- Listing 13-18: Creating and filling a temperature_readings table.
 
 CREATE TABLE temperature_readings (
     station_name text,
